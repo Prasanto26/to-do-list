@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional To-Do Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h1>📝 My Tasks</h1>
+
+    <!-- Task Form -->
+    <form id="form">
+      <div class="input-wrapper">
+        <span class="icon">✏️</span>
+        <input type="text" id="input" placeholder="Enter your task..." required />
+      </div>
+      <input type="date" id="date" required>
+
+      <!-- Start Time -->
+      <label>Start:</label>
+      <select id="startHour"></select> :
+      <select id="startMinute"></select>
+      <select id="startAmPm">
+        <option>AM</option>
+        <option>PM</option>
+      </select>
+
+      <!-- End Time -->
+      <label>End:</label>
+      <select id="endHour"></select> :
+      <select id="endMinute"></select>
+      <select id="endAmPm">
+        <option>AM</option>
+        <option>PM</option>
+      </select>
+
+      <button type="submit">➕ Add Task</button>
+    </form>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="list"></ul>
+    <p id="empty">No tasks yet 🎉</p>
+    <p id="count"></p>
+
+    <!-- Clear Button -->
+    <button id="clearCompleted">🗑️ Clear Completed</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
